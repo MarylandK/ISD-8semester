@@ -1,1 +1,33 @@
-
+┌─────────────────┐       ┌─────────────────────┐
+│    users        │       │    beach_zones      │
+├─────────────────┤       ├─────────────────────┤
+│ PK id           │       │ PK id               │
+│ email           │       │ name                │
+│ name            │       │ description         │
+│ google_id       │       │ polygon_data        │
+│ role            │       │ center_lat          │
+│ calendar_id     │       │ center_lng          │
+│ created_at      │       │ color               │
+└─────────────────┘       └──────────┬──────────┘
+                                     │ 1
+                                     │
+                                     │ N
+┌─────────────────┐       ┌──────────▼──────────┐
+│    reports      │       │     visitors        │
+├─────────────────┤       ├─────────────────────┤
+│ PK id           │       │ PK id               │
+│ zone_id (FK)    │──────▶│ zone_id (FK)        │
+│ start_date      │       │ arrival_time        │
+│ end_date        │       │ departure_time      │
+│ generated_by(FK)│       │ used_sunbed (bool)  │
+│ generated_at    │       │ used_float (bool)   │
+│ report_data     │       │ used_mattress (bool)│
+│ google_doc_link │       │ notes               │
+└─────────────────┘       └─────────────────────┘
+        │
+        │ N
+        │
+┌───────▼───────┐
+│    users      │
+│  (генерирует) │
+└───────────────┘
