@@ -1,39 +1,155 @@
-
-┌─────────────────────────────────────────────────────────────────┐
-│                     Информационная система                       │
-│                     учёта посетителей пляжа                      │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  ┌───────────────┐              ┌───────────────┐              │
-│  │               │              │               │              │
-│  │   Сотрудник   │              │   Менеджер    │              │
-│  │   (Employee)  │              │   (Manager)   │              │
-│  │               │              │               │              │
-│  └───────┬───────┘              └───────┬───────┘              │
-│          │                              │                        │
-│          ▼                              ▼                        │
-│  ┌───────────────────┐          ┌───────────────────┐          │
-│  │ • Зарегистрировать│          │ • Управлять       │          │
-│  │   приход          │          │   зонами          │          │
-│  │ • Отметить        │          │ • Формировать     │          │
-│  │   использование   │          │   отчёты          │          │
-│  │ • Зарегистрировать│          │ • Просматривать   │          │
-│  │   уход            │          │   статистику      │          │
-│  │ • Просмотреть     │          │ • Авторизоваться  │          │
-│  │   текущих         │          │   через Google    │          │
-│  └───────────────────┘          └─────────┬─────────┘          │
-│                                           │                      │
-│                                           ▼                      │
-│  ┌─────────────────────────────────────────────────────────┐    │
-│  │                    Google Сервисы                        │    │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐          │    │
-│  │  │   OAuth    │ │   Maps     │ │  Calendar  │          │    │
-│  │  │ 2.0        │ │   API      │ │   API      │          │    │
-│  │  └────────────┘ └────────────┘ └────────────┘          │    │
-│  │  ┌────────────┐ ┌────────────┐                          │    │
-│  │  │   Sheets   │ │    Docs    │                          │    │
-│  │  │   API      │ │    API      │                          │    │
-│  │  └────────────┘ └────────────┘                          │    │
-│  └─────────────────────────────────────────────────────────┘    │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
+<mxfile host="app.diagrams.net" modified="2024-03-20T00:00:00.000Z" agent="Mozilla/5.0" version="22.1.0">
+  <diagram name="Use Case" id="usecase">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Актеры -->
+        <mxCell id="2" value="Менеджер" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="3" value="Сотрудник" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="4" value="Google API" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="360" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Система -->
+        <mxCell id="5" value="ИС &quot;Наблюдение за посетителями пляжа&quot;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=680;height=520;" vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="680" height="520" as="geometry"/>
+        </mxCell>
+        
+        <!-- Use Cases для Менеджера -->
+        <mxCell id="6" value="Управление сотрудниками" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="7" value="Подтверждение регистрации" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="260" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="8" value="Назначение дежурств" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="340" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="9" value="Управление зонами" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="420" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="10" value="Формирование отчетов" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="500" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Use Cases для Сотрудника -->
+        <mxCell id="11" value="Регистрация" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="180" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="12" value="Просмотр дежурств" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="260" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="13" value="Фиксация посетителей" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="14" value="Синхронизация с календарем" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="420" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="15" value="Ввод через Google Forms" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="500" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Use Cases для Google API -->
+        <mxCell id="16" value="Calendar API" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="180" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="17" value="Sheets API" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="260" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="18" value="Docs API" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="340" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="19" value="Maps API" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="420" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связи Менеджер -->
+        <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связи Сотрудник -->
+        <mxCell id="25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="15">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связи между Use Cases и Google API -->
+        <mxCell id="30" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="8" target="16">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="31" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="15" target="17">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="32" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="10" target="18">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="33" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="9" target="19">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="34" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="14" target="16">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь между сотрудником и менеджером через регистрацию -->
+        <mxCell id="35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="11" target="7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="210"/>
+              <mxPoint x="300" y="210"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="&lt;&lt;depends&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="70" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
