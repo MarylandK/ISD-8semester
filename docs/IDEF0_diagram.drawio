@@ -1,27 +1,104 @@
-
-┌─────────────────────────────────────────────────────────────┐
-│                      Управление:                             │
-│  • Правила учёта посетителей                                 │
-│  • Регламент работы пляжа                                    │
-│  • Политика конфиденциальности                               │
-└─────────────────────────────────────────────────────────────┘
-                           ▲
-                           │
-┌────────────────────┐    │    ┌────────────────────┐
-│      Вход:         │    │    │      Выход:        │
-│ • Данные о         │────┼────▶│ • Отчёты для       │
-│   посетителях      │    │    │   менеджера        │
-│ • Отметки об       │    │    │ • Статистика       │
-│   использовании    │    │    │   посещаемости     │
-│ • Запросы на       │    │    │ • Графики          │
-│   отчёты           │    │    │   загруженности    │
-└────────────────────┘    │    └────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      Механизмы:                              │
-│  • Сотрудники (менеджеры)                                    │
-│  • Информационная система                                    │
-│  • База данных                                               │
-│  • Google сервисы                                            │
-└─────────────────────────────────────────────────────────────┘
+<mxfile host="app.diagrams.net" modified="2024-03-20T00:00:00.000Z" agent="Mozilla/5.0" version="22.1.0">
+  <diagram name="IDEF0" id="idef0">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- A-0 Контекстная диаграмма -->
+        <mxCell id="2" value="Управление наблюдением за посетителями пляжа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="434" y="300" width="300" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Входные стрелки -->
+        <mxCell id="3" value="Данные о посетителях" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="4" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="234" y="350" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" value="" vertex="1" parent="1">
+          <mxGeometry x="184" y="345" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="5" value="Запрос на отчет" style="endArrow=classic;html=1;rounded=0" edge="1" parent="1" source="6" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="184" y="400" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="" vertex="1" parent="1">
+          <mxGeometry x="184" y="395" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Выходные стрелки -->
+        <mxCell id="7" value="Сформированный отчет" style="endArrow=classic;html=1;rounded=0" edge="1" parent="1" target="8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="734" y="350" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="" vertex="1" parent="1">
+          <mxGeometry x="784" y="345" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Управление -->
+        <mxCell id="9" value="Правила учета" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" edge="1" parent="1" source="10" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="" vertex="1" parent="1">
+          <mxGeometry x="584" y="250" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="11" value="Расписание дежурств" style="endArrow=classic;html=1;rounded=0" edge="1" parent="1" source="12" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="584" y="230" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="" vertex="1" parent="1">
+          <mxGeometry x="584" y="225" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Механизмы -->
+        <mxCell id="13" value="Сотрудники" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0" edge="1" parent="1" source="14" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="" vertex="1" parent="1">
+          <mxGeometry x="434" y="450" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="15" value="ИС &quot;Пляжный учет&quot;" style="endArrow=classic;html=1;rounded=0" edge="1" parent="1" source="16" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="484" y="450" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="" vertex="1" parent="1">
+          <mxGeometry x="484" y="445" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="17" value="Google API" style="endArrow=classic;html=1;rounded=0" edge="1" parent="1" source="18" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="534" y="450" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="" vertex="1" parent="1">
+          <mxGeometry x="534" y="445" width="50" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Текст подписей -->
+        <mxCell id="19" value="Входные данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="134" y="320" width="80" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="20" value="Выходные данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="824" y="320" width="80" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="21" value="Управление" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="594" y="200" width="60" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="22" value="Механизмы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="384" y="480" width="60" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
